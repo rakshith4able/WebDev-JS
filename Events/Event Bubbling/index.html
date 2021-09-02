@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>JS Events</title>
+</head>
+
+
+<body>
+    <!--Event Bubbling occurs when there is event inside event-->
+    <!--When we click on button The lart of button shows first then alert of its parent i.e
+        , the events of the child executes and then parent and continues This is called as event bubbling-->
+    <div onclick="alert(' I am Div')">
+        This is a <button onclick="alert(' I am Button')">Button</button>
+    </div>
+    <!--Consider another example where parent onclick hides and child onclick should change background color of parent-->
+    <div id="parent">
+        Lol This is to change colour and hide We should stop event bubbling <button id="child">Change
+            background</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
